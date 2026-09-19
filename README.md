@@ -79,3 +79,7 @@ Written together with Kerem Varnalı.
 | `preliminary/pushbutton_motor_control.c`, `lab/pushbutton_motor_control.c` | Drives outputs from two push-buttons |
 | `preliminary/fibonacci_seven_segment.c`, `lab/fibonacci_seven_segment.c` | Shows Fibonacci numbers on a 4-digit seven-segment display |
 | `materials/` | Example project, programmer tools, board schematics, PIC32 I/O port reference |
+
+---
+
+These projects were completed for **CS224: Computer Organization** at Bilkent University (Fall 2024).
