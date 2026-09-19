@@ -1,6 +1,11 @@
-# CS224 Computer Organization
+# Computer Organization: MIPS Assembly, Processor Design and Embedded C
 
-Coursework for **CS224: Computer Organization** at Bilkent University (Fall 2024), from MIPS assembly programs up to a pipelined MIPS processor in SystemVerilog and C on a PIC32 microcontroller.
+Programs and hardware models that work through a computer from the instruction set down to the hardware:
+
+- **MIPS assembly:** arithmetic, arrays, bit manipulation, recursion, linked lists and reading machine code
+- **Processor design:** a single-cycle and a five-stage pipelined MIPS processor in SystemVerilog, with forwarding and hazard handling
+- **Memory:** how row-major and column-major traversal affect cache performance
+- **Embedded C:** push-button input and a multiplexed seven-segment display on a PIC32 microcontroller
 
 | Topic | Language |
 |-------|----------|
@@ -14,10 +19,9 @@ Coursework for **CS224: Computer Organization** at Bilkent University (Fall 2024
 
 Each folder has the same layout:
 
-- `preliminary/` – preliminary work, done before the lab session
-- `lab/` – work completed during the lab session
-- `handout.pdf` – the assignment
-- `materials/` – starter files provided by the course (folders 04, 05 and 07)
+- `preliminary/` and `lab/` – the programs, in two stages
+- `handout.pdf` – the problem specification
+- `materials/` – provided starter code and references (folders 04, 05 and 07)
 
 The `.asm` files run in the [MARS](https://dpetersanderson.github.io/) MIPS simulator.
 
@@ -25,8 +29,8 @@ The `.asm` files run in the [MARS](https://dpetersanderson.github.io/) MIPS simu
 | File | What it does |
 |------|--------------|
 | `preliminary/reverse_array.asm` | Reads an array from the user, reverses it in place and prints it |
-| `preliminary/arithmetic_expression.asm` | Evaluates an arithmetic expression using its own division and mod subroutines |
-| `lab/formula_calculator.asm` | Computes `(A*B) mod C / (A-B)` with division-by-zero checks |
+| `preliminary/arithmetic_expression.asm` | Computes `(B / C + D mod B - C) / B` using division and mod subroutines built from repeated subtraction |
+| `lab/formula_calculator.asm` | Computes `(A*B) mod C / (A-B)` with a division-by-zero check |
 | `lab/array_max_menu.asm` | Menu that finds an array's maximum, counts how often it appears, and counts the elements that divide it |
 | `lab/fibonacci.asm` | Loop implementation of the Fibonacci function |
 
@@ -67,7 +71,7 @@ The `.asm` files run in the [MARS](https://dpetersanderson.github.io/) MIPS simu
 | `lab/lab_report.pdf` | Lab report |
 
 ## 07 – PIC32 Microcontroller
-Done with lab partner Kerem Varnalı.
+Written together with Kerem Varnalı.
 
 | File | What it does |
 |------|--------------|

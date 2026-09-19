@@ -1,7 +1,9 @@
-# CS224 Computer Organization - Lab 2, Section 1
-# Atakan Akar (22203140)
-# Date: 16.10.2024
-# Lab work: Part 2 - Reversing Register Question
+# Reverse Register Bits
+#
+# Reads an integer and prints it with its 32 bits in reverse order.
+# Repeats until the user enters 0.
+#
+# Author: Atakan Akar
 
 .data
 askWether:

@@ -1,7 +1,9 @@
-# CS224 Computer Organization - Lab 1, Section 1
-# Atakan Akar (22203140)
-# Date: 09.10.2024
-# Preliminary work: Part 1 - read an array and reverse it in place
+# Reverse Array
+#
+# Reads the array size and elements from the user, reverses the array
+# in place by swapping elements from both ends, then prints it.
+#
+# Author: Atakan Akar
 
 .data
 question1:

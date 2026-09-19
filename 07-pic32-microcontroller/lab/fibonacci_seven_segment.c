@@ -1,8 +1,9 @@
-// CS224 Computer Organization - Lab 7, Section 1
-// Atakan Akar (22203140)
-// Date: 17.12.2024
-// Lab partner: Kerem Varnalı
-// Lab work: Fibonacci numbers on the 4-digit seven-segment display
+// Fibonacci on a Seven-Segment Display (PIC32)
+//
+// Shows the Fibonacci sequence on a 4-digit seven-segment display by
+// multiplexing the digits, holding larger numbers on screen longer.
+//
+// Authors: Atakan Akar, Kerem Varnalı
 
 unsigned char binary_pattern[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F};
 

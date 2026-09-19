@@ -1,7 +1,11 @@
-# CS224 Computer Organization - Lab 1, Section 1
-# Atakan Akar (22203140)
-# Date: 09.10.2024
-# Lab work: Part 2 - Menu Question: maximum element operations on an array
+# Array Maximum Menu
+#
+# Reads an array, then offers a menu to:
+#   1. find the maximum element,
+#   2. count how many times the maximum appears,
+#   3. count the other elements that divide the maximum evenly.
+#
+# Author: Atakan Akar
 
 .data
 question1:

@@ -1,7 +1,8 @@
-# CS224 Computer Organization - Lab 1, Section 1
-# Atakan Akar (22203140)
-# Date: 09.10.2024
-# Lab work: Part 3 - Fibonacci Question
+# Fibonacci
+#
+# Loop-based Fibonacci function; prints fib(7).
+#
+# Author: Atakan Akar
 
 ##
 ##	Program3.asm is a loop implementation

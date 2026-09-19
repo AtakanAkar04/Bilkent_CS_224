@@ -1,8 +1,9 @@
-// CS224 Computer Organization - Lab 7, Section 1
-// Atakan Akar (22203140)
-// Date: 17.12.2024
-// Lab partner: Kerem Varnalı
-// Preliminary work: Part b - push-button controlled output
+// Push-Button Output Control (PIC32)
+//
+// Reads two push-buttons on PORTE and drives outputs on PORTA: each
+// button turns on its own output for one second; pressing both turns it off.
+//
+// Authors: Atakan Akar, Kerem Varnalı
 
 /*
 Attention!

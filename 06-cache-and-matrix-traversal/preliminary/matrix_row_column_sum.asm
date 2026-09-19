@@ -1,7 +1,11 @@
-# CS224 Computer Organization - Lab 6, Section 1
-# Atakan Akar (22203140)
-# Date: 15.10.2024
-# Preliminary work: N x N matrix with row-major and column-major summation
+# Matrix Row/Column Traversal
+#
+# Allocates an N x N matrix, fills it with consecutive values and offers
+# a menu to sum it in row-major or column-major order or show a single
+# element. The two traversal orders access memory differently, which
+# makes the program useful for comparing cache performance.
+#
+# Author: Atakan Akar
 
 .data
 prompt1: .asciiz "Enter the size of the matrix (N): "

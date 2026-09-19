@@ -1,7 +1,10 @@
-# CS224 Computer Organization - Lab 3, Section 1
-# Atakan Akar (22203140)
-# Date: 22.10.2024
-# Preliminary work: Part 2 - Register Count
+# Register Usage Counter
+#
+# Asks for a register number and scans the program's own machine code,
+# decoding R-, I- and J-type instructions, to count how many times that
+# register is used.
+#
+# Author: Atakan Akar
 
 .data
 question:

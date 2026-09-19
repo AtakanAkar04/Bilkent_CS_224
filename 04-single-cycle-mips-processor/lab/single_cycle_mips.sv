@@ -1,7 +1,12 @@
-// CS224 Computer Organization - Lab 4, Section 1
-// Atakan Akar (22203140)
-// Date: 13.11.2024
-// Lab work: single-cycle MIPS processor extended with bcon and xnori
+// Single-Cycle MIPS Processor
+//
+// Single-cycle MIPS datapath and controller (based on Harris & Harris),
+// extended with two new instructions:
+//   bcon  - branch if rt = rs + 4 and rt is word-aligned
+//   xnori - bitwise XNOR with an immediate
+// Instruction memory holds a test program that exercises both.
+//
+// Author: Atakan Akar
 
 // Written by David_Harris@hmc.edu
 

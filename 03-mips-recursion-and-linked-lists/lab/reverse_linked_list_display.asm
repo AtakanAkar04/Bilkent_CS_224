@@ -1,7 +1,9 @@
-# CS224 Computer Organization - Lab 3, Section 1
-# Atakan Akar (22203140)
-# Date: 16.10.2024
-# Lab work: Part 2 - Display Linked List in Reverse Order Recursively
+# Reverse Linked List Printer
+#
+# Builds a linked list of (product number, units sold) records from user
+# input and prints it in reverse order using recursion.
+#
+# Author: Atakan Akar
 
 .data
 sizeInput:

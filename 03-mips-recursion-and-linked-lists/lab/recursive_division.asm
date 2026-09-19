@@ -1,7 +1,9 @@
-# CS224 Computer Organization - Lab 3, Section 1
-# Atakan Akar (22203140)
-# Date: 16.10.2024
-# Lab work: Part 1 - Recursive Division
+# Recursive Division
+#
+# Reads two numbers and computes their integer quotient recursively by
+# repeated subtraction, saving arguments on the stack at each call.
+#
+# Author: Atakan Akar
 
 .data
 questionForNumber1:

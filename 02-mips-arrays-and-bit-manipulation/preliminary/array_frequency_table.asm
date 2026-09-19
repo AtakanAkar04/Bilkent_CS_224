@@ -1,7 +1,9 @@
-# CS224 Computer Organization - Lab 2, Section 1
-# Atakan Akar (22203140)
-# Date: 15.10.2024
-# Preliminary work: dynamic array and frequency table of its elements
+# Array Frequency Table
+#
+# Allocates an array on the heap, fills it from user input, prints it
+# and counts how often each value 0-9 (and values > 9) appears.
+#
+# Author: Atakan Akar
 
 .data
 questionForSize:

@@ -1,7 +1,9 @@
-# CS224 Computer Organization - Lab 3, Section 1
-# Atakan Akar (22203140)
-# Date: 22.10.2024
-# Preliminary work: Part 1 - Generate Summary Linked List
+# Summary Linked List
+#
+# Builds a linked list of (product number, units sold) sales records and
+# generates a new list that combines the records of each product.
+#
+# Author: Atakan Akar
 
 .data
 sizeInput:

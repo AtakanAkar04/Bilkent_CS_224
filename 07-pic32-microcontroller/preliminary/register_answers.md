@@ -1,8 +1,9 @@
-# Lab 7 Preliminary Work - Register Questions
+# PIC32 I/O Registers: TRIS, PORT and LAT
 
-CS224 Computer Organization - Lab 7, Section 1  
-Atakan Akar (22203140), lab partner: Kerem Varnalı  
-Date: 17.12.2024
+How the TRIS (direction), PORT (read) and LAT (write) registers are used
+in the push-button and seven-segment display programs.
+
+Authors: Atakan Akar, Kerem Varnalı
 
 ## a) Registers for the push-button and motor program
 

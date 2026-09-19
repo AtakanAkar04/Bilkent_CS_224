@@ -1,7 +1,11 @@
-// CS224 Computer Organization - Lab 5, Section 1
-// Atakan Akar (22203140)
-// Date: 27.11.2024
-// Lab work: pipelined MIPS processor with hazard unit (changed parts of the given model)
+// Pipelined MIPS Processor
+//
+// Five-stage pipelined MIPS: pipeline registers (F/D, D/E, E/M, M/W),
+// datapath and a hazard unit that resolves data and control hazards with
+// forwarding, stalls and flushes. Only the modules that differ from the
+// template in materials/pipelined_mips_template.sv are included.
+//
+// Author: Atakan Akar
 
 `timescale 1ns / 1ps
 

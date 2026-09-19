@@ -1,7 +1,9 @@
-# CS224 Computer Organization - Lab 2, Section 1
-# Atakan Akar (22203140)
-# Date: 16.10.2024
-# Lab work: Part 1 - Hamming Question
+# Hamming Distance
+#
+# Reads two integers, prints every bit position where they differ and
+# the total number of differing bits. Repeats until the user enters 0.
+#
+# Author: Atakan Akar
 
 .data
 askWether:

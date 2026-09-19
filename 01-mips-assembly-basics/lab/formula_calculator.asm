@@ -1,7 +1,9 @@
-# CS224 Computer Organization - Lab 1, Section 1
-# Atakan Akar (22203140)
-# Date: 09.10.2024
-# Lab work: Part 1 - Formula Question: (A*B) mod C / (A-B)
+# Formula Calculator
+#
+# Reads A, B and C and prints (A * B) mod C / (A - B).
+# Reports a division-by-zero error and asks again when C = 0.
+#
+# Author: Atakan Akar
 
 .data
 A:	.word 0
