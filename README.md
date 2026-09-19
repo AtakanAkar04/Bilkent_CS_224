@@ -1,56 +1,77 @@
-# CS224 Computer Organization Labs
+# CS224 Computer Organization
 
-Lab assignments for **CS224: Computer Organization** at Bilkent University (Fall 2024).
-Labs 1–3 and 6 are written in **MIPS assembly**, Labs 4–5 model a MIPS processor in **SystemVerilog**, and Lab 7 programs a **PIC32 microcontroller** in C.
+Coursework for **CS224: Computer Organization** at Bilkent University (Fall 2024), from MIPS assembly programs up to a pipelined MIPS processor in SystemVerilog and C on a PIC32 microcontroller.
 
-Every lab folder follows the same layout:
+| Topic | Language |
+|-------|----------|
+| [MIPS assembly basics](01-mips-assembly-basics) | MIPS assembly |
+| [Arrays and bit manipulation](02-mips-arrays-and-bit-manipulation) | MIPS assembly |
+| [Recursion and linked lists](03-mips-recursion-and-linked-lists) | MIPS assembly |
+| [Single-cycle MIPS processor](04-single-cycle-mips-processor) | SystemVerilog |
+| [Pipelined MIPS processor](05-pipelined-mips-processor) | SystemVerilog |
+| [Cache and matrix traversal](06-cache-and-matrix-traversal) | MIPS assembly |
+| [PIC32 microcontroller](07-pic32-microcontroller) | C |
 
-| File | Contents |
-|------|----------|
-| `LabN_Prelim` | Preliminary work, submitted before the lab session |
-| `LabN_Labwork` | Work completed during the lab session |
-| `LabN_Handout.pdf` | The official lab assignment |
-| `Materials/` | Course-provided starter files (Labs 4, 5 and 7) |
+Each folder has the same layout:
 
-## Lab 1 – Introduction to MIPS Assembly
-- **Preliminary:** read an array from the user and process it; evaluate an arithmetic expression from user inputs.
-- **Labwork:**
-  1. *Formula:* compute `(A*B) mod C / (A-B)` with division-by-zero checks.
-  2. *Menu:* array menu that finds the maximum, counts how often it appears, and counts the elements that divide it.
-  3. *Fibonacci:* generate Fibonacci numbers.
+- `preliminary/` – preliminary work, done before the lab session
+- `lab/` – work completed during the lab session
+- `handout.pdf` – the assignment
+- `materials/` – starter files provided by the course (folders 04, 05 and 07)
 
-## Lab 2 – Arrays, Bit Manipulation and Subprograms
-- **Preliminary:** build an array dynamically and compute a frequency table of its elements (0–9 and >9).
-- **Labwork:**
-  1. *Hamming distance* between two values.
-  2. *Reversing a register:* reverse the bit order of a register.
+The `.asm` files run in the [MARS](https://dpetersanderson.github.io/) MIPS simulator.
 
-## Lab 3 – Recursion and Linked Lists
-- **Preliminary:**
-  1. Generate a summary linked list from an existing list.
-  2. *Register count:* count how often a register is used in a block of instructions.
-- **Labwork:**
-  1. Recursive division.
-  2. Display a linked list in reverse order recursively.
+## 01 – MIPS Assembly Basics
+| File | What it does |
+|------|--------------|
+| `preliminary/reverse_array.asm` | Reads an array from the user, reverses it in place and prints it |
+| `preliminary/arithmetic_expression.asm` | Evaluates an arithmetic expression using its own division and mod subroutines |
+| `lab/formula_calculator.asm` | Computes `(A*B) mod C / (A-B)` with division-by-zero checks |
+| `lab/array_max_menu.asm` | Menu that finds an array's maximum, counts how often it appears, and counts the elements that divide it |
+| `lab/fibonacci.asm` | Loop implementation of the Fibonacci function |
 
-## Lab 4 – MIPS Single-Cycle Datapath and Controller
-- **Preliminary:** datapath and control changes needed for the new instructions (`Lab4_Prelim.pdf`).
-- **Labwork:** SystemVerilog single-cycle MIPS processor extended with the new `bcon` and `xnori` instructions, tested with a program in `imem`.
-- **Materials:** the complete MIPS model, the final datapath diagram, sample programs for the new instructions, and the display and pulse controllers for the FPGA board.
+## 02 – Arrays and Bit Manipulation
+| File | What it does |
+|------|--------------|
+| `preliminary/array_frequency_table.asm` | Builds an array and counts how often each value (0–9 and >9) appears |
+| `lab/hamming_distance.asm` | Hamming distance between two values |
+| `lab/reverse_register_bits.asm` | Reverses the bit order of a register |
 
-## Lab 5 – Pipelined MIPS Processor
-- **Preliminary:** pipeline hazard analysis (`Lab5_Prelim.pdf`).
-- **Labwork:** five-stage pipelined MIPS processor with pipeline registers (F/D, D/E, E/M, M/W) and a hazard unit that handles forwarding, stalls and flushes.
-- **Materials:** the pipelined model to fill in, the pipeline datapath diagram and sample hazard tests.
+## 03 – Recursion and Linked Lists
+| File | What it does |
+|------|--------------|
+| `preliminary/summary_linked_list.asm` | Generates a summary linked list from an existing list |
+| `preliminary/register_usage_count.asm` | Counts how often a given register is used in a block of instructions |
+| `lab/recursive_division.asm` | Division implemented recursively |
+| `lab/reverse_linked_list_display.asm` | Prints a linked list in reverse order using recursion |
 
-## Lab 6 – Cache Memories
-- **Preliminary:** `Lab6_Prelim.pdf`, with the code in `Lab6_Prelim_Code.txt`: an N×N matrix program with row-major summation, column-major summation and element lookup, used to compare cache behavior.
-- **Labwork:** cache performance experiments (`Lab6_Labwork.pdf`).
+## 04 – Single-Cycle MIPS Processor
+| File | What it does |
+|------|--------------|
+| `preliminary/preliminary_report.pdf` | Datapath and control changes planned for the new instructions |
+| `lab/single_cycle_mips.sv` | Single-cycle MIPS processor extended with the `bcon` and `xnori` instructions, with a test program in instruction memory |
+| `materials/` | Base MIPS model, final datapath diagram, sample programs for the new instructions, FPGA display and pulse controllers |
 
-## Lab 7 – Programming the PIC32 Microcontroller
-- **Preliminary:**
-  - a) and c): how the TRIS, PORT and LAT registers are used.
-  - b) Push-button control of LEDs and a DC motor.
-  - d) Show a number sequence on a 4-digit seven-segment display.
-- **Labwork:** push-button controlled output with two buttons, written in C for the PIC32.
-- **Materials:** example project, programmer tools, board schematics, PIC32 I/O port reference and a seven-segment display example.
+## 05 – Pipelined MIPS Processor
+| File | What it does |
+|------|--------------|
+| `preliminary/preliminary_report.pdf` | Pipeline hazard analysis |
+| `lab/pipelined_mips.sv` | Five-stage pipeline registers (F/D, D/E, E/M, M/W) and a hazard unit with forwarding, stalls and flushes. Contains the parts changed from the given template. |
+| `materials/` | Pipelined model template, pipeline datapath diagram, hazard test programs |
+
+## 06 – Cache and Matrix Traversal
+| File | What it does |
+|------|--------------|
+| `preliminary/matrix_row_column_sum.asm` | Fills an N×N matrix and sums it in row-major or column-major order, or shows a single element |
+| `preliminary/preliminary_report.pdf` | Preliminary report |
+| `lab/lab_report.pdf` | Lab report |
+
+## 07 – PIC32 Microcontroller
+Done with lab partner Kerem Varnalı.
+
+| File | What it does |
+|------|--------------|
+| `preliminary/register_answers.md` | How the TRIS, PORT and LAT registers are used |
+| `preliminary/pushbutton_motor_control.c`, `lab/pushbutton_motor_control.c` | Drives outputs from two push-buttons |
+| `preliminary/fibonacci_seven_segment.c`, `lab/fibonacci_seven_segment.c` | Shows Fibonacci numbers on a 4-digit seven-segment display |
+| `materials/` | Example project, programmer tools, board schematics, PIC32 I/O port reference |
